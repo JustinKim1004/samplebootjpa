@@ -23,4 +23,17 @@ public class AlienController {
 		repo.save(alien);
 		return "/home.jsp";
 	}
+	
+	@RequestMapping("/get")
+	public ModelAndView getAlien(@RequestParam int aid) {
+		ModelAndView mv = new ModelAndView("show.jsp");
+		Alien alien = repo.findById(aid).orElse(new Alien());
+		
+		System.out.println(repo.findByTech("Java"));
+		System.out.println(repo.findByAidGraterThan(102));
+		System.out.println(repo.findByTechSorted("Java"));
+		
+		mv.addObject(alien);
+		return mv;
+	}
 }
