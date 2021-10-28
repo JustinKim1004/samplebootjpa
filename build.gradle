@@ -19,7 +19,11 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
 	// https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
-	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.53'	
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.53'
+	
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.12.5'
+		
 }
 
 test {
